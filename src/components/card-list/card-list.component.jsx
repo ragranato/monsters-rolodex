@@ -9,7 +9,13 @@ const CardList = (props) => {
       {monsters.map((monster) => {
         const { name, email, id } = monster;
         return (
-          <Card name={name} email={email} id={id} srcImage={`https://robohash.org/${id}?set=set2&size=180x180`} />         
+          <div key={id}>
+            <Card
+              name={name}
+              email={email}              
+              srcImage={`https://robohash.org/${id}?set=set2&size=180x180`}
+            />
+          </div>
         );
       })}
     </div>
